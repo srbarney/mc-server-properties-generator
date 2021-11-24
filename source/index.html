@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="description" content="Minecraft server properties generator web application" />
         <link rel="stylesheet" href="css/materialize.css" />
+        <link rel="stylesheet" href="css/modal.css" />
         <link rel="stylesheet" href="css/app.css" />
     </head>
 
@@ -24,6 +25,7 @@
             <div class="section">
                 <div class="card">
                     <div class="card-content">
+                        <h5>Configure server.properties Settings</h5>
                         <p>Choose the desired settings, then generate and view the output on the Generated tab.</p>
                     </div>
                     <div class="card-tabs">
@@ -44,7 +46,27 @@
             </div>
         </div>
 
-        <footer class="page-footer">
+        <!-- The Modal -->
+        <div id="main-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="main-modal-close">&times;</span>
+                <div id="main-modal-content">
+                    <h5>Load server.properties File</h5>
+                    <p>Paste the contents of a server.properties file in this box in order to load it.</p>
+                    <textarea id="textarea-load"></textarea>
+                    <div class="col s12">
+                        <div class="section">
+                            <a class="waves-effect waves-light btn" id="main-modal-open" onclick="loadProperties()">Load</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="page-footer blue darken-4">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -55,13 +77,14 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Developed by Steven Barney
-                    <a class="grey-text text-lighten-4 right" href="#!">TODO: Put GitHub link</a>
+                    Developed by <a href="https://github.com/srbarney/">@srbarney</a>
+                    <a class="grey-text text-lighten-4 right" href="https://github.com/srbarney/mc-server-properties-generator">View on GitHub</a>
                 </div>
             </div>
         </footer>
 
         <script src="js/materialize.js"></script>
+        <script src="js/mc-properties.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

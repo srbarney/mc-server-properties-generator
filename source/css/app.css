@@ -12,3 +12,8 @@ body {
   {
     height: 800px !important;
   }
+  
+  #textarea-load
+  {
+    height: 400px !important;
+  }
